@@ -2,7 +2,6 @@ disabled_rules :
 - line_length
 - multiple_closures_with_trailing_closure
 - trailing_newline
-- trailing_whitespace
 - mark
 - comment_spacing
 - operator_usage_whitespace
@@ -15,6 +14,8 @@ disabled_rules :
 - type_name
 - function_body_length
 - cyclomatic_complexity
+- trailing_whitespace
+- omment_spacin
 
 
 included :

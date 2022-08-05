@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AddView: View {
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var listViewModel: ListViewModel
     @State var textFieldText: String = ""
     
     var body: some View {
@@ -19,8 +21,7 @@ struct AddView: View {
                         .frame(height: 55)
                         .background(Color.white)
                     .cornerRadius(10)
-                    Button(action : {
-                    },  label: {
+                    Button(action :  saveButtonPressed ,  label: {
                         Text("Save".uppercased())
                             .foregroundColor(.white)
                             .font(.headline)
@@ -35,6 +36,11 @@ struct AddView: View {
             .navigationTitle("할일 추가하기 🖊")
         }
     }
+    
+    func saveButtonPressed() {
+        listViewModel.addItems(title: textFieldText)
+        presentationMode.wrappedValue.dismiss()
+    }
 }
 
 struct AddView_Previews: PreviewProvider {
@@ -42,5 +48,6 @@ struct AddView_Previews: PreviewProvider {
         NavigationView {
             AddView()
         }
+        .environmentObject(ListViewModel())
     }
 }

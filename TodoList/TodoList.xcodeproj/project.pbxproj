@@ -16,6 +16,7 @@
 		7FEF2FA1289AD1EF00892CC4 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEF2FA0289AD1EF00892CC4 /* AddView.swift */; };
 		7FEF2FA3289AD62E00892CC4 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEF2FA2289AD62E00892CC4 /* ItemModel.swift */; };
 		7FEF2FAB289AD90E00892CC4 /* .swiftlint.yml  in Resources */ = {isa = PBXBuildFile; fileRef = 7FEF2FAA289AD90E00892CC4 /* .swiftlint.yml  */; };
+		7FEF2FB2289D484700892CC4 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEF2FB1289D484600892CC4 /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		7FEF2FA0289AD1EF00892CC4 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		7FEF2FA2289AD62E00892CC4 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		7FEF2FAA289AD90E00892CC4 /* .swiftlint.yml  */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swiftlint.yml "; sourceTree = "<group>"; };
+		7FEF2FB0289C100F00892CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7FEF2FB1289D484600892CC4 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		A79132E7739BB80B311938E4 /* Pods_TodoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B1F09BCE55F17F3DAF279E /* Pods-TodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.debug.xcconfig"; path = "Target Support Files/Pods-TodoList/Pods-TodoList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,11 +87,11 @@
 		7FEF2F88289ACACD00892CC4 /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				7FEF2FB0289C100F00892CC4 /* Info.plist */,
 				7FEF2F9B289ACB2300892CC4 /* Application */,
-				7FEF2F9A289ACB1100892CC4 /* ViewModel */,
-				7FEF2F99289ACB0700892CC4 /* Controller */,
-				7FEF2F98289ACB0200892CC4 /* View */,
 				7FEF2F97289ACAFB00892CC4 /* Model */,
+				7FEF2F9A289ACB1100892CC4 /* ViewModel */,
+				7FEF2F98289ACB0200892CC4 /* View */,
 				7FEF2F8D289ACACF00892CC4 /* Assets.xcassets */,
 				7FEF2F8F289ACACF00892CC4 /* Preview Content */,
 			);
@@ -121,16 +124,10 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		7FEF2F99289ACB0700892CC4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		7FEF2F9A289ACB1100892CC4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7FEF2FB1289D484600892CC4 /* ListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -260,6 +257,7 @@
 			files = (
 				7FEF2FA3289AD62E00892CC4 /* ItemModel.swift in Sources */,
 				7FEF2FA1289AD1EF00892CC4 /* AddView.swift in Sources */,
+				7FEF2FB2289D484700892CC4 /* ListViewModel.swift in Sources */,
 				7FEF2F8A289ACACD00892CC4 /* TodoListApp.swift in Sources */,
 				7FEF2F9D289ACDC700892CC4 /* ListView.swift in Sources */,
 				7FEF2F9F289ACF3400892CC4 /* ListRowView.swift in Sources */,
@@ -389,15 +387,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TodoList/Preview Content\"";
 				DEVELOPMENT_TEAM = N94CS4N6VR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TodoList/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "오늘 모할래";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -409,7 +412,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -419,15 +422,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TodoList/Preview Content\"";
 				DEVELOPMENT_TEAM = N94CS4N6VR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TodoList/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "오늘 모할래";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -439,7 +447,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
