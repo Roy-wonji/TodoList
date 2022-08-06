@@ -11,27 +11,36 @@ struct ListView: View {
     @EnvironmentObject var listViewModel: ListViewModel
     //MARK: - Lifecycle
     var body: some View {
-        List {
-            ForEach(listViewModel.items) { items in
-                ListRowView(item: items)
-                    .onTapGesture {
-                        withAnimation(.linear) {
-                            listViewModel.updateItem(item: items)
-                        }
+        ZStack {
+            if listViewModel.items.isEmpty {
+                Text("리스트가 없어요 😰")
+                    .font(.title)
+                
+                    .foregroundColor(Color(red: 45 / 255 , green: 57 / 255, blue:  93 / 255))
+            } else {
+                List {
+                    ForEach(listViewModel.items) { items in
+                        ListRowView(item: items)
+                            .onTapGesture {
+                                withAnimation(.linear) {
+                                    listViewModel.updateItem(item: items)
+                                }
+                            }
                     }
+                    .onDelete(perform: listViewModel.deleteItem )
+                    .onMove(perform: listViewModel.moveItem )
+                }
+                .listStyle(PlainListStyle())
+                .navigationTitle("Todo List 📝")
+                .navigationBarItems(
+                    leading:  EditButton()
+                        .foregroundColor(.gray),
+                    trailing:
+                        NavigationLink("Add", destination: AddView())
+                        .foregroundColor(.black)
+                )
             }
-            .onDelete(perform: listViewModel.deleteItem )
-            .onMove(perform: listViewModel.moveItem )
         }
-        .listStyle(PlainListStyle())
-        .navigationTitle("Todo List 📝")
-        .navigationBarItems(
-            leading:  EditButton()
-                .foregroundColor(.gray),
-            trailing:
-                NavigationLink("Add", destination: AddView())
-                .foregroundColor(.black)
-        )
     }
 }
 //MARK: - Previews
