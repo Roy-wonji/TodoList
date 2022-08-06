@@ -35,10 +35,10 @@ struct ListView: View {
         .navigationTitle("Todo List 📝")
         .navigationBarItems(
             leading:  EditButton()
-                .foregroundColor(ColorAsset.mainColor),
+                .foregroundColor(ColorAsset.fontColor.opacity(1.0)),
             trailing:
                 NavigationLink("추가하기", destination: AddView())
-                .foregroundColor(ColorAsset.mainColor)
+                .foregroundColor(ColorAsset.fontColor.opacity(1.0))
         )
     }
 }

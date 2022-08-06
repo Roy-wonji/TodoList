@@ -15,7 +15,6 @@ struct AddView: View {
     @State var alertTile: String = ""
     @State var showAlert: Bool = false
     
-    
     //MARK:  - Lifecycle
     var body: some View {
         GeometryReader { geometry in
@@ -24,7 +23,7 @@ struct AddView: View {
                     TextField( "할일을 입력해주세요 ... " , text: $textFieldText)
                         .padding(.horizontal)
                         .frame(height: 55)
-                        .background(Color.white)
+                        .background(Color(UIColor.secondarySystemBackground))
                         .cornerRadius(10)
                     Button(action :  saveButtonPressed, label: {
                         Text("저장하기".uppercased())
@@ -33,7 +32,7 @@ struct AddView: View {
                             .frame(height: geometry.size.height / 12 )
                             .frame(maxWidth: .infinity)
                             .background(ColorAsset.mainColor)
-                            .cornerRadius(10)
+                            .cornerRadius(12)
                     })
                 }
                 .padding(14)

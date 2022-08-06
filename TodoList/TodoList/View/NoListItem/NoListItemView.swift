@@ -15,12 +15,17 @@ struct NoListItemView: View {
             ScrollView {
                 VStack(spacing: 10) {
                     Text("리스트가 없어요 😰")
-                        .foregroundColor(ColorAsset.mainColor.opacity(0.8))
-                        .fontWeight(.semibold)
+                        .fontWeight(.black)
+                        .foregroundColor(ColorAsset.fontColor.opacity(1.0))
                         .font(.title)
-                    
-                    Text("혹시 오늘 할일이 없어 ?")
-                    Text("만약에 할일이  있으면  Todo 리스트에 추가 버튼을 눌러서 오늘의 할일을 추가 하는게 어떨까 ")
+                        .padding()
+                    Text("혹시 오늘 할일이 없어요 ☹️?")
+                        .fontWeight(.semibold)
+                        .font(.custom("나눔손글씨 둥근인연", size: 15))
+                    Text("만약에 할일이  있으면  Todo 리스트에 추가 버튼을 눌러서 오늘의 할일을 추가 하는게 어떨까 😝")
+                        .fontWeight(.semibold)
+                        .font(.custom("나눔손글씨 둥근인연", size: 15))
+                        Spacer()
                     NavigationLink (destination: AddView(), label: {
                         Text("할일 추가 하러 가기 🥳")
                             .font(.headline)
@@ -40,6 +45,7 @@ struct NoListItemView: View {
                     .offset(y: animate ? -7 : 0)
                     
                 }
+                .frame(maxWidth: 400)
                 .multilineTextAlignment(.center)
                 .padding(40)
                 .onAppear(perform: addAnimation)
