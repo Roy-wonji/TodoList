@@ -1,15 +1,6 @@
 # TodoList
 오늘은 모할래 todolist 앱출시 예정
 
-### 목차
-- [프로젝트](#projects)
-- [실행 화면](#실행-화면)
-- [키워드](#키워드)
-- [구현 내용](#구현내용)
-    - [고민했던점 && 로직구현](#고민했던점--로직구현)
-- [배운개념](#배운개념)
-
-
 ## 개발환경 및 라이브러리
 [![swift](https://img.shields.io/badge/swift-5.0-orange)]()
 [![xcode](https://img.shields.io/badge/Xcode-13.0-blue)]()
@@ -21,14 +12,23 @@
 🗓 팀원: [로이](https://github.com/Roy-wonji) </br>
 
 
-## 키워드 
-
-## 구현내용
-
-## 고민했던점 && 로직구현 
+## 앱아이콘 
 
 
-## 배운개념
+##  앱 UI
+
+
+## 사용한 라이브러리
+
+## 업데이트 
+
+## 업데이트 예정
+
+
+## App stroe
+<img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83&amp" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;">
+
+
 
 ## Commit 규칙
 > 커밋 제목은 최대 50자 입력 </br>
