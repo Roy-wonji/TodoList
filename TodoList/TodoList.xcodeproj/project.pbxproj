@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1647400FC40C6057573DDD9F /* Pods_TodoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79132E7739BB80B311938E4 /* Pods_TodoList.framework */; };
+		7F88D8BE289E6CD0005981DA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88D8BD289E6CD0005981DA /* Color.swift */; };
 		7FEF2F8A289ACACD00892CC4 /* TodoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEF2F89289ACACD00892CC4 /* TodoListApp.swift */; };
 		7FEF2F8E289ACACF00892CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FEF2F8D289ACACF00892CC4 /* Assets.xcassets */; };
 		7FEF2F91289ACACF00892CC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FEF2F90289ACACF00892CC4 /* Preview Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		569C83A93F7E865677F66BA6 /* Pods-TodoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.release.xcconfig"; path = "Target Support Files/Pods-TodoList/Pods-TodoList.release.xcconfig"; sourceTree = "<group>"; };
+		7F88D8BD289E6CD0005981DA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		7FEF2F86289ACACD00892CC4 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FEF2F89289ACACD00892CC4 /* TodoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListApp.swift; sourceTree = "<group>"; };
 		7FEF2F8D289ACACF00892CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7F88D8BC289E6CB6005981DA /* Utills */ = {
+			isa = PBXGroup;
+			children = (
+				7F88D8BD289E6CD0005981DA /* Color.swift */,
+			);
+			path = Utills;
+			sourceTree = "<group>";
+		};
 		7FEF2F7D289ACACC00892CC4 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 				7FEF2F97289ACAFB00892CC4 /* Model */,
 				7FEF2F9A289ACB1100892CC4 /* ViewModel */,
 				7FEF2F98289ACB0200892CC4 /* View */,
+				7F88D8BC289E6CB6005981DA /* Utills */,
 				7FEF2F8D289ACACF00892CC4 /* Assets.xcassets */,
 				7FEF2F8F289ACACF00892CC4 /* Preview Content */,
 			);
@@ -119,10 +130,9 @@
 		7FEF2F98289ACB0200892CC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7FEF2F9C289ACDC700892CC4 /* ListView.swift */,
-				7FEF2F9E289ACF3400892CC4 /* ListRowView.swift */,
-				7FEF2FA0289AD1EF00892CC4 /* AddView.swift */,
-				7FEF2FB3289E5A5900892CC4 /* NoListItemView.swift */,
+				7FEF2FB6289E5DB500892CC4 /* MainList */,
+				7FEF2FB5289E5D9C00892CC4 /* Add */,
+				7FEF2FB7289E5DC700892CC4 /* NoListItem */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,6 +151,31 @@
 				7FEF2F89289ACACD00892CC4 /* TodoListApp.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		7FEF2FB5289E5D9C00892CC4 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				7FEF2FA0289AD1EF00892CC4 /* AddView.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		7FEF2FB6289E5DB500892CC4 /* MainList */ = {
+			isa = PBXGroup;
+			children = (
+				7FEF2F9C289ACDC700892CC4 /* ListView.swift */,
+				7FEF2F9E289ACF3400892CC4 /* ListRowView.swift */,
+			);
+			path = MainList;
+			sourceTree = "<group>";
+		};
+		7FEF2FB7289E5DC700892CC4 /* NoListItem */ = {
+			isa = PBXGroup;
+			children = (
+				7FEF2FB3289E5A5900892CC4 /* NoListItemView.swift */,
+			);
+			path = NoListItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +298,7 @@
 				7FEF2FB2289D484700892CC4 /* ListViewModel.swift in Sources */,
 				7FEF2F8A289ACACD00892CC4 /* TodoListApp.swift in Sources */,
 				7FEF2F9D289ACDC700892CC4 /* ListView.swift in Sources */,
+				7F88D8BE289E6CD0005981DA /* Color.swift in Sources */,
 				7FEF2F9F289ACF3400892CC4 /* ListRowView.swift in Sources */,
 				7FEF2FB4289E5A5900892CC4 /* NoListItemView.swift in Sources */,
 			);

@@ -13,11 +13,10 @@ struct ListView: View {
     var body: some View {
         ZStack {
             if listViewModel.items.isEmpty {
-                Text("리스트가 없어요 😰")
-                    .font(.title)
-                
-                    .foregroundColor(Color(red: 45 / 255 , green: 57 / 255, blue:  93 / 255))
-            } else {
+                NoListItemView()
+                    .transition(AnyTransition.opacity
+                        .animation(.easeIn))
+            }  else  {
                 List {
                     ForEach(listViewModel.items) { items in
                         ListRowView(item: items)
@@ -31,16 +30,16 @@ struct ListView: View {
                     .onMove(perform: listViewModel.moveItem )
                 }
                 .listStyle(PlainListStyle())
-                .navigationTitle("Todo List 📝")
-                .navigationBarItems(
-                    leading:  EditButton()
-                        .foregroundColor(.gray),
-                    trailing:
-                        NavigationLink("Add", destination: AddView())
-                        .foregroundColor(.black)
-                )
             }
         }
+        .navigationTitle("Todo List 📝")
+        .navigationBarItems(
+            leading:  EditButton()
+                .foregroundColor(ColorAsset.mainColor),
+            trailing:
+                NavigationLink("추가하기", destination: AddView())
+                .foregroundColor(ColorAsset.mainColor)
+        )
     }
 }
 //MARK: - Previews

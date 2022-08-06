@@ -32,7 +32,7 @@ struct AddView: View {
                             .font(.headline)
                             .frame(height: geometry.size.height / 12 )
                             .frame(maxWidth: .infinity)
-                            .background(Color.accentColor)
+                            .background(ColorAsset.mainColor)
                             .cornerRadius(10)
                     })
                 }
