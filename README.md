@@ -1,29 +1,43 @@
-# TodoList
-오늘은 모할래 todolist 앱출시 예정
+# 한다
+ 한다 todolist 앱출시 예정</br>
+ <p>
+ <img src = "https://user-images.githubusercontent.com/75601594/183279233-7920b855-8a97-4bea-8df7-ce02ae7179d1.png" width="25%">
+</p>
 
 ## 개발환경 및 라이브러리
 [![swift](https://img.shields.io/badge/swift-5.0-orange)]()
 [![xcode](https://img.shields.io/badge/Xcode-13.0-blue)]()
 
-## Projects
 ## 오늘은 어떤일을 할까  TodoList  
 🗓 프로젝트 소개 : 오늘은 어떤일을 할까  TodoList  !</br>
 🗓 기간 : 2022.08.03 ~   </br>
 🗓 팀원: [로이](https://github.com/Roy-wonji) </br>
 
-
-## 앱아이콘 
-
-
 ##  앱 UI
+
+![Group 10](https://user-images.githubusercontent.com/75601594/183279424-97de001b-1972-42b4-9b57-fc6b589c9de7.png)
 
 
 ## 사용한 라이브러리
+- SwiftUI, Swiftlint
 
 ## 업데이트 
+- 1.0 - 현재 앱스토어 버전 
+- 다크 모드 지원
+- SwiftUI 적요
+- combine 적용 
 
 ## 업데이트 예정
+### 기능 추가 
+- 폰토 변경 : 좀더 예쁜 폰트롤 변경(다음 업데이트)
+- 테마 원하는 4가지 색상을 선택 할수 있게 변경(다음업데이트)
+- 애플 캘린더 연동 
+- 내일 할 리스트 도 만들기
+- 광고 : 에드몹을 써보고 싶긴 하다
 
+### 새롭게 적용 해볼 기술 
+- SwiftuI + combine 으로 전체 적용 해보자 힘들겠지만  차근 차근 해보자
+- userdefalut 말고  realam 을 사용 해보자 
 
 ## App stroe
 <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83&amp" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;">
