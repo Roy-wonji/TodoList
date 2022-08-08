@@ -16,6 +16,7 @@ disabled_rules :
 - cyclomatic_complexity
 - trailing_whitespace
 - omment_spacin
+- identifier_name
 
 
 included :
