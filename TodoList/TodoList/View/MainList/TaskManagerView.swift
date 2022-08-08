@@ -9,22 +9,55 @@ import SwiftUI
 
 struct TaskManagerView: View {
     @StateObject var taskModel : TaskViewModel = TaskViewModel()
+    @Namespace var animation
     var body: some View {
-        ScrollView(.vertical , showsIndicators: false) {
-            //MARK:  - Lazy vstack
-            LazyVStack(spacing: 15 , pinnedViews: [.sectionHeaders]) {
-                
-                Section {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 10) {
-                            ForEach(taskModel.currentWeek, id: \.self){ day in
-                                Text(day.formatted(date: .abbreviated, time: .omitted))
-                            }
-                        }
-                    }
+        GeometryReader{ geometry in
+            ScrollView(.vertical , showsIndicators: false) {
+                //MARK:  - Lazy vstack
+                LazyVStack(spacing: 15 , pinnedViews: [.sectionHeaders]) {
                     
-                } header: {
-                    headerViews()
+                    Section {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 10) {
+                                ForEach(taskModel.currentWeek, id: \.self){ day in
+                                    VStack(spacing: 10) {
+                                        Text(taskModel.extractDate(date: day, format: "dd"))
+                                            .font(.system(size: 15))
+                                            .fontWeight(.semibold)
+                                        Text(taskModel.extractDate(date: day, format: "EEE"))
+                                            .font(.system(size: 14))
+                                        Circle()
+                                            .fill(.white)
+                                            .frame(width: 8, height: 8)
+                                            .opacity(taskModel.isToday(date: day) ? 1 : 0)
+                                    }
+                                    .foregroundStyle(taskModel.isToday(date: day) ? .primary : .tertiary)
+                                    .foregroundColor(taskModel.isToday(date: day) ?  .white : .black)
+                                    .frame(width: (geometry.size.width / 8.5) , height: geometry.size.height / 7)
+                                    .background(
+                                        ZStack {
+                                            if taskModel.isToday(date: day){
+                                                    Capsule()
+                                                    .fill(ColorAsset.fontColor)
+                                                    .matchedGeometryEffect(id: "CURRENTDAY", in: animation)
+                                            }
+                                        }
+                                    )
+                                    .containerShape(Capsule())
+                                    //MARK: - 날짜 이동
+                                    .onTapGesture {
+                                        withAnimation {
+                                            taskModel.currentDate = day
+                                        }
+                                    }
+                                }
+                            }
+                            .padding(.horizontal)
+                        }
+                        
+                    } header: {
+                        headerViews()
+                    }
                 }
             }
         }
