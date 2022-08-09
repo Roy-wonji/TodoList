@@ -48,12 +48,6 @@ class TaskViewModel : ObservableObject {
             }
         }
     }
-    //MARK: Dateformatter
-    func extractDate(date: Date, format: String) -> String{
-        let formatter = DateFormatter()
-        formatter.dateFormat = format
-        return formatter.string(from: date)
-    }
     
     //MARK:  Filtering  날짜
     func filterTodayTask() {
