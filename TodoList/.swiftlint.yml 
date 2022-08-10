@@ -18,6 +18,8 @@ disabled_rules :
 - omment_spacin
 - identifier_name
 - force_cast
+- statement_position
+- opening_brace
 
 
 included :

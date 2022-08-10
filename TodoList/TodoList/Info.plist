@@ -2,15 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>ko_KR</string>
 	<key>CFBundleIcons</key>
 	<dict/>
 	<key>CFBundleIcons~ipad</key>
 	<dict/>
+	<key>Localizationnativedevelopmentregion</key>
+	<string>Korea</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>나눔손글씨 둥근인연</string>
 		<string>나눔손글씨 맛있는체</string>
 	</array>
 </dict>

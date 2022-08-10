@@ -6,17 +6,16 @@
 //
 
 import SwiftUI
+import CoreData
 
 @main
 struct TodoListApp: App {
-   @State var listViewModel: ListViewModel = ListViewModel()
+    let persistenceController = PersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ListView()
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
-            .environmentObject(listViewModel)
+            TodoLIstMainHomeView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
