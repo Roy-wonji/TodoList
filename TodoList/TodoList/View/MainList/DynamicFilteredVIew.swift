@@ -50,7 +50,7 @@ struct DynamicFilteredView<Content: View, T>: View where T: NSManagedObject{
                         Text("오늘의 할일을 추가 하는게 어떨까 😝")
                             .fontWeight(.semibold)
                             .font(.custom("나눔손글씨 둥근인연", size: 15))
-                            .padding(.bottom , 70)
+                            .padding(.bottom , 80)
                             .overlay(
                                 Button {
                                     taskModel.addNewTask.toggle()
@@ -69,7 +69,7 @@ struct DynamicFilteredView<Content: View, T>: View where T: NSManagedObject{
                                             , radius: animate ? 30 : 10,
                                             x: .zero,
                                             y:  animate ? 50 : 30 )
-                                    .scaleEffect(animate ? 1.2 : 1.0)
+                                    .scaleEffect(animate ? 1.1 : 1.0)
                                     .offset(y: animate ? -7 : 0)
                                 
                             )

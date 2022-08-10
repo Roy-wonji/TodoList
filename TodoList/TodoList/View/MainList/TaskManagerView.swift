@@ -46,7 +46,7 @@ struct TaskManagerView: View {
                                     }
                                     // MARK: Foreground Style
                                     .foregroundStyle(taskModel.isToday(date: day) ? .primary : .secondary)
-                                    .foregroundColor(taskModel.isToday(date: day) ? .white : .black)
+                                    .foregroundColor(taskModel.isToday(date: day) ? .white : ColorAsset.dateColor)
                                     // MARK: Capsule Shape
                                     .frame(width: (gemotry.size.width / 9) , height: (gemotry.size.height / 9))
                                     .background(
@@ -260,7 +260,6 @@ struct TaskManagerView: View {
         }
         .padding()
         .padding(.top,getSafeArea().top)
-        .background(Color.white)
     }
 }
 struct TaskManagerView_Previews: PreviewProvider {
