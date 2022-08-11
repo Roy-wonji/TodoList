@@ -24,19 +24,19 @@ struct AddNewTask: View {
         NavigationView{
             
             List{
-                
                 Section {
                     TextField("Go to work", text: $taskTitle)
                 } header: {
                     Text(" TodoList 제목 🗓")
                 }
+                .onAppear(perform: UIApplication.shared.hideKeyboard)
 
                 Section {
                     TextField("Nothing", text: $taskDescription)
                 } header: {
                     Text("TodoList 해야 할일 📝")
                 }
-                
+                .onAppear(perform: UIApplication.shared.hideKeyboard)
                 // Disabling Date for Edit Mode
                 if taskModel.editTask == nil{
                     

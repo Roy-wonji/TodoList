@@ -30,7 +30,6 @@ struct TaskManagerView: View {
                                 ForEach(taskModel.currentWeek,id: \.self){day in
                                     
                                     VStack(spacing: 10){
-                                        
                                         Text(taskModel.extractDate(date: day, format: "dd"))
                                             .font(.system(size: 15))
                                             .fontWeight(.semibold)
@@ -164,7 +163,7 @@ struct TaskManagerView: View {
                 
                 VStack(spacing: 10){
                     Circle()
-                        .fill(taskModel.isCurrentHour(date: task.taskDate ?? Date()) ? (task.isCompleted ? .green : .black) : .clear)
+                        .fill(taskModel.isCurrentHour(date: task.taskDate ?? Date()) ? (task.isCompleted ? .green : ColorAsset.dateColor) : .clear)
                         .frame(width: 15, height: 15)
                         .background(
                         
