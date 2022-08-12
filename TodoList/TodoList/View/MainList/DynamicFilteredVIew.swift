@@ -36,20 +36,20 @@ struct DynamicFilteredView<Content: View, T>: View where T: NSManagedObject{
         Group {
             if request.isEmpty {
                 GeometryReader { geometry in
-                    VStack(spacing: 5) {
+                    VStack(spacing: 10) {
                         Text("리스트가 없어요 😰")
                             .fontWeight(.black)
                             .foregroundColor(ColorAsset.fontColor.opacity(1.0))
                             .font(.title)
                         Text("혹시 오늘 할일이 없어요 ☹️?")
                             .fontWeight(.semibold)
-                            .font(.custom("나눔손글씨 둥근인연", size: 15))
-                        Text("만약에 할일이  있으면  Todo 리스트에 추가 버튼을 눌러서")
+                            .font(.custom("나눔손글씨 둥근인연", size: 13))
+                        Text("만약에 할일이  있으면  Todo 리스트에 ")
                             .fontWeight(.semibold)
-                            .font(.custom("나눔손글씨 둥근인연", size: 15))
+                            .font(.custom("나눔손글씨 둥근인연", size: 13))
                         Text("오늘의 할일을 추가 하는게 어떨까 😝")
                             .fontWeight(.semibold)
-                            .font(.custom("나눔손글씨 둥근인연", size: 15))
+                            .font(.custom("나눔손글씨 둥근인연", size: 13))
                             .padding(.bottom , 80)
                             .overlay(
                                 Button {
@@ -63,15 +63,14 @@ struct DynamicFilteredView<Content: View, T>: View where T: NSManagedObject{
                                         .background(animate ? ColorAsset.mainViewColor : ColorAsset.mainColor)
                                         .cornerRadius(12)
                                 }
-                                    .padding(.horizontal, animate ? 10 : 20)
+                                    .padding(.horizontal, animate ? .zero : 10)
                                     .shadow(color:  animate ? ColorAsset.mainColor.opacity(0.7) :
                                                 ColorAsset.changeColor.opacity(0.7)
                                             , radius: animate ? 30 : 10,
                                             x: .zero,
-                                            y:  animate ? 50 : 30 )
+                                            y:  animate ? 20 : 30 )
                                     .scaleEffect(animate ? 1.1 : 1.0)
                                     .offset(y: animate ? -7 : 0)
-                                
                             )
                             .sheet(isPresented: $taskModel.addNewTask) {
                                 // Clearing Edit Data
@@ -80,7 +79,6 @@ struct DynamicFilteredView<Content: View, T>: View where T: NSManagedObject{
                                 AddNewTask()
                                     .environmentObject(taskModel)
                             }
-                        
                     }
                     .frame(maxWidth: 400)
                     .multilineTextAlignment(.leading)

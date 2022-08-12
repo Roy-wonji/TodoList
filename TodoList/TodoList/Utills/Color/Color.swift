@@ -13,5 +13,6 @@ struct  ColorAsset {
     static let fontColor = Color("FontColor")
     static let mainViewColor = Color("MainColor2")
     static let dateColor = Color("datecolor")
+    static let titleColor = Color("titleColor")
 }
 

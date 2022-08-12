@@ -142,7 +142,7 @@ struct TaskManagerView: View {
                         } label: {
                             Image(systemName: "pencil.circle.fill")
                                 .font(.title)
-                                .foregroundColor(.primary)
+                                .foregroundColor(ColorAsset.dateColor)
                         }
                     }
                     
@@ -160,7 +160,7 @@ struct TaskManagerView: View {
                 }
             }
             else{
-                
+                //MARK: - 라인 색상
                 VStack(spacing: 10){
                     Circle()
                         .fill(taskModel.isCurrentHour(date: task.taskDate ?? Date()) ? (task.isCompleted ? .green : ColorAsset.dateColor) : .clear)
@@ -168,11 +168,10 @@ struct TaskManagerView: View {
                         .background(
                         
                             Circle()
-                                .stroke(.black,lineWidth: 1)
+                                .stroke(ColorAsset.dateColor,lineWidth: 0.5)
                                 .padding(-3)
                         )
                         .scaleEffect(!taskModel.isCurrentHour(date: task.taskDate ?? Date()) ? 0.8 : 1)
-                    
                     Rectangle()
                         .fill(ColorAsset.mainViewColor)
                         .frame(width: 3)
@@ -187,37 +186,35 @@ struct TaskManagerView: View {
                         
                         Text(task.taskTitle ?? "")
                             .font(.title2.bold())
+                            .foregroundColor(ColorAsset.dateColor)
                         
                         Text(task.taskDescription ?? "")
                             .font(.callout)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(.lightGray))
                             .foregroundStyle(.secondary)
                     }
                     .hLeading()
                     
                     Text(task.taskDate?.formatted(date: .omitted, time: .shortened) ?? "")
+                        .foregroundColor(ColorAsset.dateColor)
                 }
                 
                 if taskModel.isCurrentHour(date: task.taskDate ?? Date()){
                     
                     // MARK: Team Members
                     HStack(spacing: 12){
-  
                         // MARK: Check Button
                         if !task.isCompleted{
-                            
                             Button {
                                 // MARK: Updating Task
                                 task.isCompleted = true
-                                
                                 // Saving
                                 try? context.save()
                             } label: {
-                                
                                 Image(systemName: "checkmark")
                                     .foregroundStyle(.black)
                                     .padding(10)
-                                    .background(Color.white,in: RoundedRectangle(cornerRadius: 10))
+                                    .background(ColorAsset.titleColor,in: RoundedRectangle(cornerRadius: 10))
                             }
                         }
                         Text(task.isCompleted ? "Marked as Completed" : "Mark Task as Completed")
@@ -228,7 +225,8 @@ struct TaskManagerView: View {
                     .padding(.top)
                 }
             }
-            .foregroundColor(taskModel.isCurrentHour(date: task.taskDate ?? Date()) ? .white : .black)
+            .foregroundColor(taskModel.isCurrentHour(date: task.taskDate ?? Date()) ? ColorAsset.dateColor :  ColorAsset.dateColor)
+            
             .padding(taskModel.isCurrentHour(date: task.taskDate ?? Date()) ? 15 : 0)
             .padding(.bottom,taskModel.isCurrentHour(date: task.taskDate ?? Date()) ? 0 : 10)
             .hLeading()
