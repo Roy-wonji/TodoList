@@ -14,7 +14,6 @@
 		7F436C5028A3DB31008155CD /* TodoLIstMainHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F436C4F28A3DB30008155CD /* TodoLIstMainHomeView.swift */; };
 		7F436C5228A3E097008155CD /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F436C5128A3E097008155CD /* PersistenceController.swift */; };
 		7F6175FC289E964F008B81DC /* 나눔손글씨 둥근인연.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FC80E0C289E903000AE2CC8 /* 나눔손글씨 둥근인연.ttf */; };
-		7F6175FD289E9652008B81DC /* 나눔손글씨 맛있는체.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FC80E0D289E903700AE2CC8 /* 나눔손글씨 맛있는체.ttf */; };
 		7F617600289E9FE6008B81DC /* MainLanchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F6175FF289E9FE6008B81DC /* MainLanchScreen.storyboard */; };
 		7F88D8BE289E6CD0005981DA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88D8BD289E6CD0005981DA /* Color.swift */; };
 		7FA9E1A428A1278000A7FC2C /* TaskManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9E1A328A1278000A7FC2C /* TaskManagerView.swift */; };
@@ -22,6 +21,7 @@
 		7FA9E1A828A1289C00A7FC2C /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9E1A728A1289C00A7FC2C /* TaskViewModel.swift */; };
 		7FA9E1AB28A137E400A7FC2C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9E1AA28A137E400A7FC2C /* View.swift */; };
 		7FC80E0F289E90A400AE2CC8 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC80E0E289E90A400AE2CC8 /* Font.swift */; };
+		7FDFCC4D28C77AED00C0728C /* 나눔손글씨 맛있는체.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FC80E0D289E903700AE2CC8 /* 나눔손글씨 맛있는체.ttf */; };
 		7FEF2F8A289ACACD00892CC4 /* TodoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEF2F89289ACACD00892CC4 /* TodoListApp.swift */; };
 		7FEF2F8E289ACACF00892CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FEF2F8D289ACACF00892CC4 /* Assets.xcassets */; };
 		7FEF2F91289ACACF00892CC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FEF2F90289ACACF00892CC4 /* Preview Assets.xcassets */; };
@@ -302,8 +302,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FDFCC4D28C77AED00C0728C /* 나눔손글씨 맛있는체.ttf in Resources */,
 				7FEF2FAB289AD90E00892CC4 /* .swiftlint.yml  in Resources */,
-				7F6175FD289E9652008B81DC /* 나눔손글씨 맛있는체.ttf in Resources */,
 				7F617600289E9FE6008B81DC /* MainLanchScreen.storyboard in Resources */,
 				7F6175FC289E964F008B81DC /* 나눔손글씨 둥근인연.ttf in Resources */,
 				7FEF2F91289ACACF00892CC4 /* Preview Assets.xcassets in Resources */,
@@ -504,7 +504,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.4;
+				CURRENT_PROJECT_VERSION = 1.0.5;
 				DEVELOPMENT_ASSET_PATHS = "\"TodoList/Preview Content\"";
 				DEVELOPMENT_TEAM = N94CS4N6VR;
 				ENABLE_PREVIEWS = YES;
@@ -523,7 +523,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = Roy.com.Handa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -545,7 +545,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.4;
+				CURRENT_PROJECT_VERSION = 1.0.5;
 				DEVELOPMENT_ASSET_PATHS = "\"TodoList/Preview Content\"";
 				DEVELOPMENT_TEAM = N94CS4N6VR;
 				ENABLE_PREVIEWS = YES;
@@ -564,7 +564,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = Roy.com.Handa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

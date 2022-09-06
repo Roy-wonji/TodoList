@@ -10,7 +10,8 @@
 	<string>Korea</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>나눔손글씨 맛있는체</string>
+		<string>나눔손글씨 맛있는체.ttf</string>
+		<string>나눔손글씨 둥근인연.ttf</string>
 	</array>
 </dict>
 </plist>

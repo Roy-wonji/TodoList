@@ -8,6 +8,6 @@
 import SwiftUI
 
 struct Fonts {
-    static let mainFont = UIFont.fontNames(forFamilyName: "나눔손글씨 둥근인연")
-    static let subFont = UIFont.fontNames(forFamilyName: "나눔손글씨 맛있는체")
+    static let mainFont: String = "나눔손글씨 둥근인연"
+    static let subFont: String = "나눔손글씨 맛있는체"
 }
