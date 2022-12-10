@@ -17,6 +17,13 @@ struct TaskManagerView: View {
     @Environment(\.editMode) var editButton
     
     var body: some View {
+        VStack {
+            calenderView()
+        }
+    }
+    
+    @ViewBuilder
+    func calenderView() -> some View {
         GeometryReader { gemotry in
             ScrollView(.vertical, showsIndicators: false) {
                 // MARK: Lazy Stack With Pinned Header
@@ -101,39 +108,28 @@ struct TaskManagerView: View {
             AddNewTask()
                 .environmentObject(taskModel)
         }
-
-
     }
-    
     // MARK: Tasks View
     @ViewBuilder
     func tasksView()->some View{
-        
         LazyVStack(spacing: 20){
-            
             // Converting object as Our Task Model
             DynamicFilteredView(dateToFilter: taskModel.currentDate) { (object: Task) in
-                
                 taskCardView(task: object)
             }
         }
         .padding()
         .padding(.top)
     }
-    
     // MARK: Task Card View
     @ViewBuilder
     func taskCardView(task: Task)->some View{
-        
         // MARK: Since CoreData Values will Give Optinal data
         HStack(alignment: editButton?.wrappedValue == .active ? .center : .top,spacing: 30){
-            
             // If Edit mode enabled then showing Delete Button
             if editButton?.wrappedValue == .active{
-                
                 // Edit Button for Current and Future Tasks
                 VStack(spacing: 10){
-                    
                     if task.taskDate?.compare(Date()) == .orderedDescending || Calendar.current.isDateInToday(task.taskDate ?? Date()){
                         
                         Button {
@@ -145,11 +141,9 @@ struct TaskManagerView: View {
                                 .foregroundColor(ColorAsset.dateColor)
                         }
                     }
-                    
                     Button {
                         // MARK: Deleting Task
                         context.delete(task)
-                        
                         // Saving
                         try? context.save()
                     } label: {
@@ -238,7 +232,6 @@ struct TaskManagerView: View {
         }
         .hLeading()
     }
-    
     // MARK: Header
     @ViewBuilder
     func headerView()->some View{

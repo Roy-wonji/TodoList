@@ -20,32 +20,29 @@ struct AddNewTask: View {
     
     @EnvironmentObject var taskModel: TaskViewModel
     var body: some View {
-        
         NavigationView{
-            
             List{
                 Section {
                     TextField("Go to work", text: $taskTitle)
                 } header: {
-                    Text(" TodoList 제목 🗓")
+                    Text(" Todo List 제목 🗓")
                 }
                 .onAppear(perform: UIApplication.shared.hideKeyboard)
 
                 Section {
                     TextField("Nothing", text: $taskDescription)
                 } header: {
-                    Text("TodoList 해야 할일 📝")
+                    Text("Todo List 해야 할일 📝")
                 }
                 .onAppear(perform: UIApplication.shared.hideKeyboard)
                 // Disabling Date for Edit Mode
                 if taskModel.editTask == nil{
-                    
                     Section {
                         DatePicker("", selection: $taskDate)
                             .datePickerStyle(.graphical)
                             .labelsHidden()
                     } header: {
-                        Text(" TodoList 날짜 추가")
+                        Text(" Todo List 날짜 추가")
                     }
                 }
             }

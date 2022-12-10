@@ -38,9 +38,9 @@ struct DynamicFilteredView<Content: View, T>: View where T: NSManagedObject{
                 GeometryReader { geometry in
                     VStack(spacing: 10) {
                         Text("리스트가 없어요 😰")
+                            .font(.custom("나눔손글씨 둥근인연", size: 30))
                             .fontWeight(.black)
                             .foregroundColor(ColorAsset.fontColor.opacity(1.0))
-                            .font(.custom("나눔손글씨 둥근인연", size: 25))
                         Text("혹시 오늘 할일이 없어요 ☹️?")
                             .fontWeight(.semibold)
                             .font(.custom("나눔손글씨 둥근인연", size: 18))
